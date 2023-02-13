@@ -1,0 +1,59 @@
+/* LAYOUT */
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.body, .header, .kontak, .konten, .sidebar{
+    border-width: 0.5px;
+    border-style: solid;
+    border-color: #000000;
+}
+
+.gambar{
+    background-image: url("https://i.pinimg.com/originals/ef/0d/ec/ef0dec7cb8b80b65ae925ccb9286f567.jpg");
+    width: 128px;
+    height: 131px;
+    padding: 30px;
+    float: left;
+    background-size: cover;
+}
+
+.header{
+    width: 80%;
+    height: 130px;
+    padding: 30px;
+    float: right;
+    background: #10096D;
+    color: #fff;
+    
+}
+
+.kontak{
+    width: 100%;
+    background-color: #fff;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.kontak li {
+    display: inline-block;
+    margin-right: 200px;
+}
+
+
+.konten{
+    width: 64.1%;
+    height: 600px;
+    padding: 35px;
+    float: left;
+}
+
+
+.sidebar{
+    width: 24.45%;
+    height: 600px;
+    padding: 35px;
+    float: right;
+    background: #fff;
+}
