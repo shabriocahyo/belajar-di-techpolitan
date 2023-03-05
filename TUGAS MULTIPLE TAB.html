@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Simple Multiple Tabs</title>
+        <style>
+
+            .tabContent{
+                display: none;
+            }
+
+            .tabContent.active{
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            function openTab(tabName) {        
+                let tabcontent = document.getElementsByClassName("tabContent");
+                for(let i=0; i<tabcontent.length; i++){
+                    tabcontent[i].style.display = "none";
+                }
+                document.getElementById(tabName).style.display = "block"; 
+            }
+        </script>
+
+        <div class="tabList">
+            <button onclick="openTab('tab1')">Tab 1</button>
+            <button onclick="openTab('tab2')">Tab 2</button>
+            <button onclick="openTab('tab3')">Tab 3</button>
+        </div>
+        <div id="tab1" class="tabContent active">
+            <h3>Tab 1</h3>
+            <h1>Ini adalah isi dari Tab 1.</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div id="tab2" class="tabContent">
+            <h3>Tab 2</h3>
+            <h1>Ini adalah isi dari Tab 2.</h1>
+            <p>Lacus vel facilisis volutpat est velit. Lobortis elementum nibh tellus molestie nunc non. Tortor pretium viverra suspendisse potenti nullam ac tortor. Nulla at volutpat diam ut venenatis tellus in metus. Duis ut diam quam nulla porttitor massa. Lectus nulla at volutpat diam ut venenatis. At in tellus integer feugiat scelerisque varius morbi. At tempor commodo ullamcorper a lacus vestibulum sed arcu. Sit amet consectetur adipiscing elit ut aliquam. Vulputate ut pharetra sit amet aliquam id diam maecenas ultricies. Sed viverra ipsum nunc aliquet bibendum enim facilisis gravida. Pretium nibh ipsum consequat nisl vel pretium lectus quam. Et magnis dis parturient montes nascetur ridiculus. Vitae congue eu consequat ac felis donec et odio pellentesque. Urna cursus eget nunc scelerisque viverra mauris.</p>
+        </div>
+        <div id="tab3" class="tabContent">
+            <h3>Tab 3</h3>
+            <h1>Ini adalah isi dari Tab 3.</h1>
+            <p>Nullam eget felis eget nunc lobortis mattis aliquam faucibus purus. Tincidunt vitae semper quis lectus nulla at. Eu ultrices vitae auctor eu augue. Cras pulvinar mattis nunc sed. Blandit cursus risus at ultrices mi tempus imperdiet nulla malesuada. Elit pellentesque habitant morbi tristique. Tempus urna et pharetra pharetra massa massa ultricies mi quis.</p>
+        </div>
+    </body>
+</html>

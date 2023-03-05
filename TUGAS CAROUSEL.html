@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://code.jquery.com/jquery-3.6.3.slim.min.js" integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo=" crossorigin="anonymous"></script>
+		<title>TUGAS CAROUSEL</title>
+		<style>
+			.carousel img {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				opacity: 0;
+				transition: opacity 1s ease;
+			}
+			.carousel img.active {
+				opacity: 1;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="carousel">
+			<img src="https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77701414098.jpg" alt="gambar1" class="active">
+			<img src="https://wallpaperaccess.com/full/2637771.jpg" alt="gambar2">
+			<img src="https://images.pling.com/img/00/00/62/69/92/1603732/b2d7d935c6f4ed8b5d6de4b7e7d4c5e26a09246d0f41a0e52edc4799891738e5288b.jpg" alt="gambar3">
+			<img src="https://images.pling.com/img/00/00/64/96/96/1741287/16202156446092875c10ee02.67296596-11.jpg" alt="gambar4">
+			<img src="https://images.hdqwalls.com/wallpapers/delorean-from-future-4k-ha.jpg" alt="gambar5">
+		</div>
+		<script>
+			fetch('https://dummyjson.com/products')
+			.then(res => res.json())
+			.then(console.log);
+			// Menentukan variabel
+			let gambar = 0;
+			// Mengubah dalam bentuk Array
+			const slides = $(".carousel img");
+			// Fungsi untuk mengatur interval
+			function nextSlide() {
+				// Menghapus kelas "active" dari gambar saat ini
+				$(slides[gambar]).removeClass("active");
+				// Mengatur indeks gambar berikutnya
+				gambar = (gambar + 1) % slides.length;
+				// Menampilkan gambar dengan menambahkan kelas "active" pada gambar berikutnya
+				$(slides[gambar]).addClass("active");
+			}
+			// Memulai interval
+			setInterval(nextSlide, 2000);
+
+				// 	Fungsi untuk mengatur interval
+				// 	function nextSlide() {
+				// 	// Menghapus kelas "active" dari gambar saat ini
+				// 	slides[currentSlide].classList.remove("active");
+				// 	// Mengatur indeks gambar berikutnya
+				// 	currentSlide = (currentSlide + 1) % slides.length;
+				// 	// Menambahkan kelas "active" pada gambar berikutnya
+				// 	slides[currentSlide].classList.add("active");
+				// 	}
+		</script>
+	</body>
+</html>
