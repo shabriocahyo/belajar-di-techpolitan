@@ -11,9 +11,9 @@ router.get('/', (req, res) => {
   const { minPrice, maxPrice } = req.query;
   let result = products;
   if (minPrice && maxPrice) {
-    result = products.filter(p => p.price >= parseInt(minPrice) && p.price <= parseInt(maxPrice));
+    result = products.filter(p => p.price >= +minPrice && p.price <= +maxPrice);
   }
-  res.json(result);
+  res.send(result);
 });
 
 // READ PRODUCT BY ID
